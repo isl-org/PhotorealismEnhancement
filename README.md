@@ -8,11 +8,21 @@ alt="Video" width="240" height="180" border="10" /></a>
 
 **[Paper](http://vladlen.info/papers/EPE.pdf)** | **[Website (with side-by-side comparisons)](https://intel-isl.github.io/PhotorealismEnhancement/)** | **[Video (Paper)](https://www.youtube.com/watch?v=P1IcaBn3ej0)** | **[Video (Keynote talk)](https://youtu.be/yLLhMkctfBY?t=2360)**
 
-## Data
+## Results
+
+### Ours
 
 [GTA (Playing For Data) => Cityscapes](https://drive.google.com/u/0/uc?id=1FXKa7PrtQgkv_C_Egz2YLXHwyNc4CHnK&export=download)
 
 [GTA (Playing For Data) => Mapillary Vistas](https://drive.google.com/u/0/uc?id=1uTYd2mekB1Fo9btMDafoVs74oKrRScua&export=download)
+
+### Baselines
+
+[Color Transfer](http://erikreinhard.com/colour_transfer.html) - [GTA (Playing For Data) => Cityscapes](https://drive.google.com/u/0/uc?id=1CdjUe8tYo_drkMrYaB3xjdPDeaKPzxYX&export=download)
+
+[CUT](http://taesung.me/ContrastiveUnpairedTranslation/) - [GTA (Playing For Data) => Cityscapes](https://drive.google.com/u/0/uc?id=1zQudKSmTRQ4zeHjYAAiUvk_G9cO9lQh8&export=download)
+
+[MUNIT](https://github.com/NVlabs/MUNIT) - [GTA (Playing For Data) => Cityscapes](https://drive.google.com/u/0/uc?id=1zmTM_lyQrbJA_OL58J4MKWkveYKX6UxR&export=download)
 
 **More coming soon!**
 
