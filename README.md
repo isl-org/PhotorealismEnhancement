@@ -6,7 +6,7 @@
 " target="_blank"><img src="http://img.youtube.com/vi/P1IcaBn3ej0/0.jpg" 
 alt="Video" width="240" height="180" border="10" /></a>
 
-**[Paper](http://vladlen.info/papers/EPE.pdf)** | **[Website (with side-by-side comparisons)](https://intel-isl.github.io/PhotorealismEnhancement/)** | **[Video (Paper)](https://www.youtube.com/watch?v=P1IcaBn3ej0)** | **[Video (Keynote talk)](https://youtu.be/yLLhMkctfBY?t=2360)**
+**[Paper](http://vladlen.info/papers/EPE.pdf)** | **[Website (with side-by-side comparisons)](https://isl-org.github.io/PhotorealismEnhancement/)** | **[Video (Paper)](https://www.youtube.com/watch?v=P1IcaBn3ej0)** | **[Video (Keynote talk)](https://youtu.be/yLLhMkctfBY?t=2360)**
 
 ## Results
 
