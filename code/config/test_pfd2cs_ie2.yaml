@@ -1,0 +1,84 @@
+---
+weight_dir: ./savegames/
+name_load: pfd2cs_ie2-600000
+
+common:
+  unpin: false
+  batch_size: 1
+  num_loaders: 14
+  log_interval: 1
+  seed: 1  
+
+train:
+  max_epochs: -1
+  max_iterations: 1000000
+  save_epochs: -1
+  save_iterations: 10000
+  name_save: pfd2cs_ie2
+  shuffle_train: true
+  val_interval: 10000
+   
+test:
+  shuffle_test: false
+
+real_dataset:
+  name: Cityscapes
+  filelist: /data/Cityscapes/cs_half/files.txt
+
+fake_dataset: 
+  name: GTA
+  train_filelist: /data/Pfd/train.txt
+  val_filelist: /data/Pfd/val.txt 
+  test_filelist: /data/Pfd/test.txt 
+  sampling: 
+    type: 'matching'
+    matched_crop_path: /data/matches/match_Pfd-Cityscapes_1.0.csv
+    crop_weight_path: /data/matches/crop_weights_Pfd-Cityscapes_1.0.npz
+
+generator:
+  type: hr_new
+  config:
+    encoder_type: ENCODER
+    stem_norm: group
+    num_stages: 6
+    other_norm: group
+    gbuffer_norm: RAC
+    gbuffer_encoder_norm: residual2
+    num_gbuffer_layers: 3
+  optimizer:
+    type: adam
+    learning_rate: 0.0001
+    adam_beta: 0.9
+    adam_beta2: 0.999
+    clip_gradient_norm: 1000
+  scheduler:
+    type: 'step'
+    step: 100000
+    gamma: 0.5
+    
+discriminator:
+  type: ppde
+  run_always: false
+  config:
+    norm: group
+    num_layers: 4
+    max_dim: 256
+  optimizer:
+    type: adam
+    learning_rate: 0.0001 
+    adam_beta: 0.9
+    adam_beta2: 0.999
+    clip_gradient_norm: 1000
+  scheduler:
+    type: 'step'
+    step: 1000000
+    gamma: 0.5
+    
+objectives:
+  gan: ls
+  perceptual:
+    type: 'lpips_vgg'
+    weight: 1
+  reg:
+    weight: 0.03
+...

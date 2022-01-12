@@ -24,5 +24,4 @@ alt="Video" width="240" height="180" border="10" /></a>
 
 [MUNIT](https://github.com/NVlabs/MUNIT) - [GTA (Playing For Data) => Cityscapes](https://drive.google.com/u/0/uc?id=1zmTM_lyQrbJA_OL58J4MKWkveYKX6UxR&export=download)
 
-**More coming soon!**
 
