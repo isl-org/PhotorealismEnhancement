@@ -51,7 +51,7 @@ We also provide a discriminator without using those labels. In case you want to 
 
 ### Matching patches across datasets
 
-First, we need to sample crops from source and target datasets and compute VGG features on those crops. As a default, we sample 15 crops per image. But, depending on the size of your dataset, increasing the number of sampled crops may be beneficial.
+First, we need to sample crops from source and target datasets and compute VGG features on those crops. As a default, we sample 15 crops per image. But, depending on the size of your dataset, increasing the number of sampled crops may be beneficial. The csv files for the datasets contain per row the paths to the images of each dataset.
     
     python epe/matching/feature_based/collect_crops.py PfD pfd_files.csv 		# creates crop_PfD.csv, crop_Pfd.npz
     python epe/matching/feature_based/collect_crops.py Cityscapes cs_files.csv	# creates crop_Cityscapes.csv, crop_Cityscapes.npz
