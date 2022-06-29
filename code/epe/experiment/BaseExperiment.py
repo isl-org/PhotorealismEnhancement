@@ -222,7 +222,7 @@ class LogSync:
 	# 		pass
 	# 	pass
 
-	def print(self, i):
+	def print(self, i, max_iterations):
 		""" Print to screen. """
 
 		if i % (20*self._log_interval) == 0:
@@ -253,7 +253,8 @@ class LogSync:
 					line.append('---- ')
 					pass				
 				pass
-
+			
+			line[0] = line[0] + '/ ' + str(max_iterations) + ' '
 			self._log.info(''.join(line))			
 			pass
 
@@ -555,7 +556,7 @@ class BaseExperiment:
 					del log_img
 					del batch
 					
-					self._log_sync.print(self.i)
+					self._log_sync.print(self.i, self.max_iterations)
 					
 
 					if self._should_save_iteration(self.i):
