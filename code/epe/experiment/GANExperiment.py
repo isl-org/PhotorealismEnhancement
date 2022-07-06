@@ -125,7 +125,7 @@ class GANExperiment(BaseExperiment):
 			try:
 				torch.save(v, f'{base_filename}_gen-{k}.pth.tar')
 			except:
-				self._log.error('Cannot store {k}.')
+				self._log.error(f'Cannot store {k}.')
 
 		sd, od = self.disc_state.save_to_dict()
 		for k,v in sd.items():
